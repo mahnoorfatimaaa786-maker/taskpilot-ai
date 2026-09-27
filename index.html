@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>TaskPilot AI — Turn Ideas Into Action</title>
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+  <!-- =========================
+       NAVBAR
+  ========================== -->
+
+  <header class="navbar">
+
+    <div class="logo">
+      TaskPilot<span>AI</span>
+    </div>
+
+    <nav>
+
+      <a href="#features">
+        Features
+      </a>
+
+      <a href="#demo">
+        AI Demo
+      </a>
+
+      <a href="#pricing">
+        Pricing
+      </a>
+
+    </nav>
+
+    <button
+      class="nav-btn"
+      onclick="scrollToDemo()"
+    >
+      Try TaskPilot
+    </button>
+
+  </header>
+
+
+
+  <!-- =========================
+       HERO SECTION
+  ========================== -->
+
+  <section class="hero">
+
+
+    <!-- BACKGROUND VIDEO -->
+
+    <video
+      class="hero-video"
+      autoplay
+      muted
+      loop
+      playsinline
+    >
+
+      <source
+        src="hero-video.mp4"
+        type="video/mp4"
+      >
+
+    </video>
+
+
+    <!-- DARK VIDEO OVERLAY -->
+
+    <div class="hero-overlay"></div>
+
+
+
+    <!-- HERO CONTENT -->
+
+    <div class="hero-content">
+
+
+      <div class="badge">
+        ✦ AI-powered productivity
+      </div>
+
+
+      <h1>
+
+        Turn your ideas into
+
+        <span>
+          organized action.
+        </span>
+
+      </h1>
+
+
+      <p>
+
+        TaskPilot AI transforms your goals into clear,
+        actionable project plans so you can focus on
+        getting things done.
+
+      </p>
+
+
+      <div class="hero-buttons">
+
+
+        <button
+          class="primary-btn"
+          onclick="scrollToDemo()"
+        >
+
+          Try TaskPilot →
+
+        </button>
+
+
+        <button
+          class="secondary-btn"
+          onclick="scrollToFeatures()"
+        >
+
+          Explore Features
+
+        </button>
+
+
+      </div>
+
+
+      <div class="trust">
+
+        ✓ Smart planning
+        &nbsp;&nbsp;
+
+        ✓ AI-powered
+        &nbsp;&nbsp;
+
+        ✓ Simple workflow
+
+      </div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         AI STATUS CARD
+    ========================== -->
+
+    <div class="ai-status-card">
+
+
+      <div class="ai-status-icon">
+        ✦
+      </div>
+
+
+      <div class="ai-status-content">
+
+        <strong>
+          AI Planning Active
+        </strong>
+
+        <span>
+          Optimizing your workflow...
+        </span>
+
+      </div>
+
+
+      <div class="ai-status-dot"></div>
+
+
+    </div>
+
+
+
+    <!-- =========================
+         DASHBOARD PREVIEW
+    ========================== -->
+
+    <div class="dashboard">
+
+
+      <!-- PROJECT HEADER -->
+
+      <div class="dash-top">
+
+
+        <div>
+
+          <small>
+            PROJECT OVERVIEW
+          </small>
+
+          <h3>
+            Website Launch
+          </h3>
+
+        </div>
+
+
+        <div class="avatar">
+          MF
+        </div>
+
+
+      </div>
+
+
+
+      <!-- PROJECT PROGRESS -->
+
+      <div class="progress-box">
+
+
+        <div class="progress-info">
+
+          <span>
+            Project progress
+          </span>
+
+          <strong>
+            68%
+          </strong>
+
+        </div>
+
+
+        <div class="progress">
+
+          <div class="progress-fill"></div>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           TASK STATISTICS
+      ========================== -->
+
+      <div class="task-stats">
+
+
+        <div class="stat-card">
+
+          <small>
+            Total Tasks
+          </small>
+
+          <strong id="totalTasks">
+            4
+          </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <small>
+            Completed
+          </small>
+
+          <strong id="completedTasks">
+            2
+          </strong>
+
+        </div>
+
+
+        <div class="stat-card">
+
+          <small>
+            Pending
+          </small>
+
+          <strong id="pendingTasks">
+            2
+          </strong>
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           TASK LIST
+      ========================== -->
+
+      <div class="tasks">
+
+
+        <!-- TASK 1 -->
+
+        <div class="task completed">
+
+
+          <span class="task-icon">
+            ✓
+          </span>
+
+
+          <span class="task-name">
+            Research & planning
+          </span>
+
+
+          <small class="priority high">
+            HIGH
+          </small>
+
+
+          <button
+            class="edit-btn"
+            onclick="editTask(this)"
+          >
+            ✎
+          </button>
+
+
+          <button
+            class="delete-btn"
+            onclick="deleteTask(this)"
+          >
+            🗑
+          </button>
+
+
+        </div>
+
+
+
+        <!-- TASK 2 -->
+
+        <div class="task completed">
+
+
+          <span class="task-icon">
+            ✓
+          </span>
+
+
+          <span class="task-name">
+            Design landing page
+          </span>
+
+
+          <small class="priority high">
+            HIGH
+          </small>
+
+
+          <button
+            class="edit-btn"
+            onclick="editTask(this)"
+          >
+            ✎
+          </button>
+
+
+          <button
+            class="delete-btn"
+            onclick="deleteTask(this)"
+          >
+            🗑
+          </button>
+
+
+        </div>
+
+
+
+        <!-- TASK 3 -->
+
+        <div class="task">
+
+
+          <span class="task-icon">
+            ○
+          </span>
+
+
+          <span class="task-name">
+            Build frontend
+          </span>
+
+
+          <small class="priority high">
+            HIGH
+          </small>
+
+
+          <button
+            class="edit-btn"
+            onclick="editTask(this)"
+          >
+            ✎
+          </button>
+
+
+          <button
+            class="delete-btn"
+            onclick="deleteTask(this)"
+          >
+            🗑
+          </button>
+
+
+        </div>
+
+
+
+        <!-- TASK 4 -->
+
+        <div class="task">
+
+
+          <span class="task-icon">
+            ○
+          </span>
+
+
+          <span class="task-name">
+            Connect API
+          </span>
+
+
+          <small class="priority medium">
+            MEDIUM
+          </small>
+
+
+          <button
+            class="edit-btn"
+            onclick="editTask(this)"
+          >
+            ✎
+          </button>
+
+
+          <button
+            class="delete-btn"
+            onclick="deleteTask(this)"
+          >
+            🗑
+          </button>
+
+
+        </div>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           SEARCH + FILTERS
+      ========================== -->
+
+      <div class="task-controls">
+
+
+        <input
+          type="text"
+          id="taskSearch"
+          placeholder="Search tasks..."
+          oninput="filterTasks()"
+        >
+
+
+        <select
+          id="taskFilter"
+          onchange="filterTasks()"
+        >
+
+          <option value="all">
+            All priorities
+          </option>
+
+          <option value="high">
+            High
+          </option>
+
+          <option value="medium">
+            Medium
+          </option>
+
+          <option value="low">
+            Low
+          </option>
+
+        </select>
+
+
+        <select
+          id="statusFilter"
+          onchange="filterTasks()"
+        >
+
+          <option value="all">
+            All status
+          </option>
+
+          <option value="pending">
+            Pending
+          </option>
+
+          <option value="completed">
+            Completed
+          </option>
+
+        </select>
+
+
+      </div>
+
+
+
+      <!-- =========================
+           ADD NEW TASK
+      ========================== -->
+
+      <div class="add-task-box">
+
+
+        <input
+          type="text"
+          id="newTaskInput"
+          placeholder="Add a new task..."
+        >
+
+
+        <select id="priorityInput">
+
+
+          <option value="high">
+            High
+          </option>
+
+
+          <option
+            value="medium"
+            selected
+          >
+            Medium
+          </option>
+
+
+          <option value="low">
+            Low
+          </option>
+
+
+        </select>
+
+
+        <button
+          class="secondary-btn"
+          onclick="addTask()"
+        >
+
+          + Add Task
+
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =========================
+       AI DEMO SECTION
+  ========================== -->
+
+  <section
+    class="demo-section"
+    id="demo"
+  >
+
+
+    <div class="section-heading">
+
+
+      <div class="badge">
+        AI PROJECT PLANNER
+      </div>
+
+
+      <h2>
+
+        Give AI your goal.
+
+        <span>
+          Get a plan.
+        </span>
+
+      </h2>
+
+
+      <p>
+
+        Describe what you want to accomplish and
+        TaskPilot will turn it into actionable steps.
+
+      </p>
+
+
+    </div>
+
+
+
+    <div class="ai-box">
+
+
+      <textarea
+        id="goalInput"
+        placeholder="Example: I want to launch an online store..."
+      ></textarea>
+
+
+      <button
+        class="primary-btn"
+        onclick="generatePlan()"
+      >
+
+        ✦ Generate Plan
+
+      </button>
+
+
+      <div id="result"></div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =========================
+       FEATURES SECTION
+  ========================== -->
+
+  <section
+    class="features-section"
+    id="features"
+  >
+
+
+    <div class="section-heading">
+
+
+      <div class="badge">
+        POWERFUL FEATURES
+      </div>
+
+
+      <h2>
+
+        Everything you need to
+
+        <span>
+          move forward.
+        </span>
+
+      </h2>
+
+
+    </div>
+
+
+
+    <div class="feature-grid">
+
+
+      <!-- FEATURE 1 -->
+
+      <div class="feature-card">
+
+
+        <div class="icon">
+          ✦
+        </div>
+
+
+        <h3>
+          AI Task Breakdown
+        </h3>
+
+
+        <p>
+
+          Turn big goals into smaller,
+          manageable tasks automatically.
+
+        </p>
+
+
+      </div>
+
+
+
+      <!-- FEATURE 2 -->
+
+      <div class="feature-card">
+
+
+        <div class="icon">
+          ◎
+        </div>
+
+
+        <h3>
+          Smart Priorities
+        </h3>
+
+
+        <p>
+
+          Know what needs your attention
+          first with intelligent prioritization.
+
+        </p>
+
+
+      </div>
+
+
+
+      <!-- FEATURE 3 -->
+
+      <div class="feature-card">
+
+
+        <div class="icon">
+          ◫
+        </div>
+
+
+        <h3>
+          Project Dashboard
+        </h3>
+
+
+        <p>
+
+          See projects, tasks and progress
+          from one clean dashboard.
+
+        </p>
+
+
+      </div>
+
+
+
+      <!-- FEATURE 4 -->
+
+      <div class="feature-card">
+
+
+        <div class="icon">
+          ↗
+        </div>
+
+
+        <h3>
+          Progress Tracking
+        </h3>
+
+
+        <p>
+
+          Track completed work and stay
+          focused on upcoming milestones.
+
+        </p>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =========================
+       PRICING SECTION
+  ========================== -->
+
+  <section
+    class="pricing-section"
+    id="pricing"
+  >
+
+
+    <div class="section-heading">
+
+
+      <div class="badge">
+        SIMPLE PRICING
+      </div>
+
+
+      <h2>
+
+        Start planning
+
+        <span>
+          smarter.
+        </span>
+
+      </h2>
+
+
+    </div>
+
+
+
+    <div class="pricing-grid">
+
+
+      <!-- FREE PLAN -->
+
+      <div class="price-card">
+
+
+        <h3>
+          Free
+        </h3>
+
+
+        <div class="price">
+
+          $0
+
+          <small>
+            /month
+          </small>
+
+        </div>
+
+
+        <p>
+          For getting started.
+        </p>
+
+
+        <ul>
+
+          <li>
+            ✓ 3 projects
+          </li>
+
+          <li>
+            ✓ AI task planning
+          </li>
+
+          <li>
+            ✓ Basic dashboard
+          </li>
+
+        </ul>
+
+
+        <button class="secondary-btn">
+          Get Started
+        </button>
+
+
+      </div>
+
+
+
+      <!-- PRO PLAN -->
+
+      <div class="price-card popular">
+
+
+        <div class="popular-label">
+          MOST POPULAR
+        </div>
+
+
+        <h3>
+          Pro
+        </h3>
+
+
+        <div class="price">
+
+          $12
+
+          <small>
+            /month
+          </small>
+
+        </div>
+
+
+        <p>
+          For serious productivity.
+        </p>
+
+
+        <ul>
+
+          <li>
+            ✓ Unlimited projects
+          </li>
+
+          <li>
+            ✓ Advanced AI planning
+          </li>
+
+          <li>
+            ✓ Smart priorities
+          </li>
+
+          <li>
+            ✓ Progress analytics
+          </li>
+
+        </ul>
+
+
+        <button class="primary-btn">
+          Start Pro
+        </button>
+
+
+      </div>
+
+
+    </div>
+
+
+  </section>
+
+
+
+  <!-- =========================
+       CTA SECTION
+  ========================== -->
+
+  <section class="cta">
+
+
+    <h2>
+
+      Your next project
+
+      <span>
+        starts here.
+      </span>
+
+    </h2>
+
+
+    <p>
+
+      Stop wondering what to do next.
+      Start turning ideas into action.
+
+    </p>
+
+
+    <button
+      class="primary-btn"
+      onclick="scrollToDemo()"
+    >
+
+      Try TaskPilot AI →
+
+    </button>
+
+
+  </section>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer>
+
+
+    <div class="logo">
+      TaskPilot<span>AI</span>
+    </div>
+
+
+    <p>
+      © 2026 TaskPilot AI. Built for smarter work.
+    </p>
+
+
+  </footer>
+
+
+
+  <!-- =========================
+       JAVASCRIPT
+  ========================== -->
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>
